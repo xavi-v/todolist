@@ -76,10 +76,21 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+ #   DATABASES = {
+ #       'default': {
+ #           'ENGINE': 'django.db.backends.sqlite3',
+ #           'NAME': BASE_DIR / 'db.sqlite3',
+ #       }
+ #  }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'xavi-v_todolist',
+        'USER': 'xavi-v_ultimate',
+        'PASSWORD': '$P455word$',
+        'HOST': 'postgresql-xavi-v.alwaysdata.net',
+        'PORT': '5432',
     }
 }
 
