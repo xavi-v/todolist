@@ -44,7 +44,7 @@ def task_toggle(request, task_id):
 
 def task_edit(request, task_id):
     tk = Task.objects.get(id = task_id)
-    titulo = request.Post.get("title")
+    titulo = request.POST.get("title")
     tk.title = titulo
     tk.save()
     return JsonResponse({
